@@ -1,0 +1,19 @@
+h1{
+  color: rgb(194, 41, 20);
+}
+
+ul{
+  list-style: none;
+}
+.product{
+  float: left;
+  margin: 10px;
+}
+#productPrice{
+  color: rgb(177, 39, 39);
+}
+.productName{
+  color:rgb(79, 80, 163);
+  font-size: 15px;
+}
+
