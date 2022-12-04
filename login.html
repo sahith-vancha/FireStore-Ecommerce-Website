@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FireStore | Login</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="navbar">
+				<div id="companyLogo"> <!--site logo-->
+					<img src="./images/logo.png">
+				</div>	
+				<nav> <!--navigation area -->
+					<ul class="topNav" id="myTopNav">
+						<li><a href="homepage.html">HOME</a></li>
+						<li><a href="products.html">PRODUCTS</a></li>
+						<li class="current"><a href="login.html">LOGIN/REGISTER</a></li>
+						<li><a href="cart.html">CART</a></li>
+						<li><img src="./images/navbars.png" width="20" height="20" onclick="menuToggle()" class="icon"></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="showcase"> <!--showcase section with intro message and picture -->
+				<div class="showcaseLeft">
+					<div class="form-container">
+						<div class="form-button">
+							<span onclick="login()">LOGIN</span>
+							<span onclick="register()">REGISTER</span>
+							<hr id="indicator">
+						</div>
+
+						<form method="post" id="LoginForm">
+							<input type="text" placeholder="username" name="username">
+							<input type="password" placeholder="password" name="password">
+							<button type="submit" class="btn">LOGIN</button>
+						</form>
+
+						<form method="post" id="RegForm">
+							<input type="text" placeholder="First Name" name="fname">
+							<input type="text" placeholder="Last Name" name="lname">
+							<input type="text" placeholder="create a username" name="username_new">
+							<input type="password" placeholder="create a password" name="password_new">
+							<button type="submit" class="btn">REGISTER</button>
+						</form>
+					</div>
+
+				</div>
+				<div class="showcaseRight">
+					<img src="./images/showcase.png">
+				</div>
+			</div>	
+		</div>
+	</header>
+
+	<div class="footer">
+		<div class="logomessage">
+			<img src="./images/logo.png">
+			<p>Copyright 2022</p>
+		</div>
+		<div class="contact">
+			<h3>Questions or Comments?</h3><br>
+			<p>Call us at 770-365-4522</p><br>
+			<p>Email us at FireStoreSupport@gmail.com</p>
+		</div>
+	</div>
+
+
+
+	<script>
+		function menuToggle() {
+			var x = document.getElementById("myTopNav");
+			if (x.className === "topnav") {
+				x.className += " responsiveNav";
+			}
+			else {
+				x.className = "topnav";
+			}
+
+		}
+	</script>
+
+	<script>
+		var LoginForm = document.getElementById("LoginForm");
+		var RegForm = document.getElementById("RegForm");
+		var Indicator = document.getElementById("indicator");
+
+		function register() {
+			RegForm.style.transform = "translateX(0px)";
+			LoginForm.style.transform = "translateX(0px)";
+			Indicator.style.transform = "translateX(100px)";
+		}
+
+		function login() {
+			RegForm.style.transform = "translateX(300px)";
+			LoginForm.style.transform = "translateX(300px)";
+			Indicator.style.transform = "translateX(0px)";
+		}
+
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

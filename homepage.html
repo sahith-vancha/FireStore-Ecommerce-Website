@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FireStore | Home</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="navbar">
+				<div id="companyLogo"> <!--site logo-->
+					<img src="./images/logo.png">
+				</div>	
+				<nav> <!--navigation area -->
+					<ul class="topNav" id="myTopNav">
+						<li class="current"><a href="homepage.html">HOME</a></li>
+						<li><a href="products.html">PRODUCTS</a></li>
+						<li><a href="login.html">LOGIN/REGISTER</a></li>
+						<li><a href="cart.html">CART</a></li>
+						<li><img src="./images/navbars.png" width="20" height="20" onclick="menuToggle()" class="icon"></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="showcase"> <!--showcase section with intro message and picture -->
+				<div class="showcaseLeft">
+					<h1>Bring Something New<br>To Your Next Workout!</h1>
+					<p>Explore a wide-range of active wear options<br>that re-define fit, form, and function to help you<br>meet your athletic goals.</p>
+				</div>
+				<div class="showcaseRight">
+					<img src="./images/showcase.png">
+				</div>
+			</div>	
+		</div>
+	</header>
+
+	<div class="slideshow">
+		<div class="mySlides fade">
+			<img src="./images/shoes.png" style="width:100%">
+		</div>
+		<div class="mySlides fade">
+			<img src="./images/shirts.png" style="width:100%">
+		</div>
+		<div class="mySlides fade">
+			<img src="./images/pants.png" style="width:100%">
+		</div>
+		<div class="mySlides fade">
+			<img src="./images/shorts.png" style="width:100%">
+		</div>
+		<div class="mySlides fade">
+			<img src="./images/socks.png" style="width:100%">
+		</div>
+		<div class="mySlides fade">
+			<img src="./images/caps.png" style="width:100%">
+		</div>
+	</div>
+
+	<div class="newRelease">
+		<div class="newReleaseTitle">
+			<h2>New Releases</h2>
+		</div>
+		<div class="newReleaseItems">
+			<div class="newShoes">
+				<p>Nike HyperFlex Running Shoes</p>
+				<img src="./images/hyperflex_shoes.png">
+			</div>
+
+			<div class="newShirt">
+				<p>Reebok FlexMove T-Shirt</p>
+				<img src="./images/aeroflex_shirt.png">
+				<p>
+			</div>
+
+			<div class="newPants">
+				<p>Adidas Comfort Track Pants</p>
+				<img src="./images/comfort_trackpants.png">
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="logomessage">
+			<img src="./images/logo.png">
+			<p>Copyright 2022</p>
+		</div>
+		<div class="contact">
+			<h3>Questions or Comments?</h3><br>
+			<p>Call us at 770-365-4522</p><br>
+			<p>Email us at FireStoreSupport@gmail.com</p>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script> 
+	let slideIndex = 0;
+	showSlides();
+
+	function showSlides() {
+		let i;
+		let slides = document.getElementsByClassName("mySlides");
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		}
+
+		slideIndex++;
+		if (slideIndex > slides.length) {slideIndex = 1}
+		slides[slideIndex-1].style.display = "block";
+		setTimeout(showSlides, 2000); 
+	} 
+	</script>
+
+	<script>
+		function menuToggle() {
+			var x = document.getElementById("myTopNav");
+			if (x.className === "topnav") {
+				x.className += " responsiveNav";
+			}
+			else {
+				x.className = "topnav";
+			}
+
+		}
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
